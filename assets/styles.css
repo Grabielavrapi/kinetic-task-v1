@@ -1,0 +1,223 @@
+/* Reset global */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f5f5f5d4;
+    color: #333;
+    min-height: 100vh; /* Siguron që body të mbushë lartësinë e viewport */
+    display: flex;
+    flex-direction: column; /* Përmbajtja rreshtohet vertikalisht */
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+/* Header */
+.header {
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+}
+.header-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+}
+.header-logo .logo-img {
+    height: 40px;
+}
+.header-contact {
+    font-size: 16px;
+    color: #366299 !important;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+}
+.header-contact i {
+    margin: 0 5px;
+}
+/* Main */
+main.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px 10px;
+    text-align: center;
+    flex: 1; /* Main zgjerohet për të mbushur hapësirën e mbetur */
+}
+/* Titujt specifikë për .container */
+.container h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+    color: #2b2c35;
+    margin-bottom: 20px;
+}
+.container h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 20px;
+}
+form {
+    max-width: 900px;
+    margin: 0 auto;
+}
+select,
+input[type="text"],
+input[type="email"],
+input[type="tel"] {
+    width: 100%;
+    max-width: 400px;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+    box-shadow: 0 5px 15px rgba(206, 206, 207, 0.5);
+}
+select {
+    appearance: none;
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="12" height="6" viewBox="0 0 12 6"><path d="M0 0h12L6 6z" fill="%23000"/></svg>') no-repeat right 10px center;
+    background-size: 12px;
+    color: #666;
+}
+p {
+    font-size: 14px;
+    color: #666;
+    margin: 10px 0;
+}
+button {
+    background-color: #799eff;
+    color: white;
+    padding: 12px 40px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-family: 'Arial', sans-serif;
+    cursor: pointer;
+    margin: 10px;
+    transition: background-color 0.3s ease;
+}
+button:hover {
+    background-color: #366efc;
+}
+.checkbox-container {
+    text-align: left;
+    max-width: 400px;
+    margin: 20px auto;
+    font-size: 12px;
+    color: #666;
+    padding: 15px;
+    background-color: #fafafa;
+}
+.checkbox-container input {
+    width: auto;
+    margin-right: 10px;
+}
+/* Step 3 */
+.summary-list {
+    text-align: left;
+    max-width: 400px;
+    margin: 0 auto 20px;
+}
+.summary-list dt {
+    font-size: 16px;
+    color: #333;
+    margin: 10px 0;
+    font-weight: bold;
+}
+.summary-list dd {
+    font-size: 16px;
+    color: #333;
+    margin: 0 0 10px 20px;
+}
+.summary-list span {
+    font-weight: normal;
+}
+/* Footer */
+footer.footer {
+    width: 100%;
+    background-color: #ebebeb;
+    padding: 20px 40px; /* Reduktuar padding për të shmangur hapësirën e tepërt */
+    font-size: 12px;
+    color: #666;
+}
+.footer-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.footer-links {
+    margin-top: 20px;
+}
+.footer-links a {
+    color: #366299;
+    text-decoration: none;
+    margin: 0 5px;
+}
+.footer-links a:hover {
+    text-decoration: underline;
+}
+.footer-text p {
+    margin: 10px 0;
+}
+/* Media Queries */
+@media (max-width: 768px) {
+    .header-inner {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+    }
+    .header-contact {
+        margin-top: 10px;
+    }
+    main.container {
+        padding: 20px;
+    }
+    .container h1 {
+        font-size: 24px;
+    }
+    .container h3 {
+        font-size: 20px;
+    }
+    select,
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"] {
+        max-width: 100%;
+    }
+    button {
+        width: 100%;
+        max-width: 300px;
+    }
+    footer.footer {
+        padding: 20px;
+    }
+}
+@media (max-width: 480px) {
+    .container h1 {
+        font-size: 20px;
+    }
+    .container h3 {
+        font-size: 18px;
+    }
+    .header-contact {
+        font-size: 11px;
+    }
+    button {
+        padding: 10px;
+        font-size: 14px;
+    }
+    .summary-list dt,
+    .summary-list dd {
+        font-size: 14px;
+    }
+}
